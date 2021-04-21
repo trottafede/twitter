@@ -8,7 +8,7 @@ const app = express();
 
 //Conectando a base de datos
 mongoose
-  .connect("mongodb://localhost/twitter")
+  .connect("mongodb+srv://root:root@cluster0.5r57u.mongodb.net/test")
   .then((db) => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
