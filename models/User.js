@@ -11,7 +11,7 @@ const userSchema = new Schema({
   // profilePicture: String,
 
   //tweets: {username: String, comment: String },
-  following: [followingID:],
+  // following: [followingID:],
   //followers: {username: String},
 });
 

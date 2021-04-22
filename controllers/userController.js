@@ -60,18 +60,18 @@ module.exports = {
           //   password: hash,
           // };
 
-          const newUser = new User();
-          newUser.firstName = firstName;
-          newUser.lastName = lastName;
-          newUser.userName = userName;
-          newUser.email = email;
-          newUser.password = hash;
+          // const newUser = new User();
+          // newUser.firstName = firstName;
+          // newUser.lastName = lastName;
+          // newUser.userName = userName;
+          // newUser.email = email;
+          // newUser.password = hash;
 
-          const follow = { username: "Marcus" };
+          // const follow = { username: "Marcus" };
 
-          newUser.following = User.following("Fede");
+          // newUser.following = User.following("Fede");
 
-          await newUser.save();
+          // await newUser.save();
 
           // await User.updateOne(
           //   { userName: "Ppiriz" },
