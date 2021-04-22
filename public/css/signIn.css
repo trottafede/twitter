@@ -1,6 +1,14 @@
+body {
+  background-color: #e6ecf0;
+}
 .registro {
   padding: 40px;
   margin: 40px auto 40px auto;
   display: flex;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
