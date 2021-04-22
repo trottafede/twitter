@@ -52,37 +52,23 @@ module.exports = {
             "Todo válido y validado------------------------------------------------"
           );
 
-          // let newUser = {
-          //   firstName: firstName,
-          //   lastName: lastName,
-          //   userName: userName,
-          //   email: email,
-          //   password: hash,
-          // };
+          let newUser = new User({
+            firstName: firstName,
+            lastName: lastName,
+            userName: userName,
+            email: email,
+            password: hash,
+          });
 
-          // const newUser = new User();
-          // newUser.firstName = firstName;
-          // newUser.lastName = lastName;
-          // newUser.userName = userName;
-          // newUser.email = email;
-          // newUser.password = hash;
+          newUser.save((error, savvedNewUser) => {
+            if (error) return console.log(error);
+            console.log("\n User salvado: \n" + savvedNewUser);
+          });
 
-          // const follow = { username: "Marcus" };
-
-          // newUser.following = User.following("Fede");
-
-          // await newUser.save();
-
-          // await User.updateOne(
-          //   { userName: "Ppiriz" },
-          //   { $push: { username: "fede" } }
-          // );
-
-          console.log(newUser);
           res.redirect("/");
         } else {
           console.log(
-            "Hay algo que no es válido-------------------- ---------------------------"
+            "Hay algo que no es válido------------------------------------------------"
           );
         }
       });
