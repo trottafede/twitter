@@ -13,8 +13,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="signUp.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/signIn.css" />
+    <title>Sign up!</title>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
           <div class="registro">
             <form
               class="row g-3 needs-validation"
-              action="/register"
+              action="/signUp"
               method="POST"
               novalidate
             >
@@ -41,9 +41,11 @@
                   name="firstName"
                   placeholder="Nombre"
                   required
+                  minlength="4"
                 />
                 <div class="valid-feedback">Todo ok!</div>
-                <div class="invalid-feedback">Ingresa nombre</div>
+                <div class="invalid-feedback">Ingresa nombre.</div>
+                <div class="invalid-feedback">Minimo 4 dígitos</div>
               </div>
 
               <div class="mb-3 col-sm-4">
@@ -55,9 +57,11 @@
                   name="lastName"
                   placeholder="Apellido"
                   required
+                  minlength="4"
                 />
                 <div class="valid-feedback">Todo ok!</div>
                 <div class="invalid-feedback">Ingresa apellido</div>
+                <div class="invalid-feedback">Minimo 4 dígitos</div>
               </div>
 
               <div class="mb-3 col-sm-4">
@@ -69,9 +73,11 @@
                   name="userName"
                   placeholder="Nombre de usuario"
                   required
+                  minlength="4"
                 />
                 <div class="valid-feedback">Todo ok!</div>
                 <div class="invalid-feedback">Ingresa nombre</div>
+                <div class="invalid-feedback">Minimo 4 dígitos</div>
               </div>
 
               <div class="mb-3 col-sm-6">
@@ -85,7 +91,7 @@
                   required
                 />
                 <div class="valid-feedback">Todo ok!</div>
-                <div class="invalid-feedback">Ingresa email</div>
+                <div class="invalid-feedback">Ingresa email válido</div>
               </div>
 
               <div class="mb-3 col-sm-6">
@@ -97,11 +103,16 @@
                   name="password"
                   placeholder="password"
                   required
+                  minlength="4"
                 />
                 <div class="valid-feedback">Todo ok!</div>
                 <div class="invalid-feedback">Ingresa password</div>
+                <div class="invalid-feedback">Minimo 4 dígitos</div>
               </div>
 
+              <div class="mb-3">
+                <a href="/signIn"><small>¿Ya tienes una cuenta?</small></a>
+              </div>
               <div class="mb-3 d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" type="submit">
                   Registrarse
@@ -119,6 +130,6 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
-    <script src="./login&signup.js"></script>
+    <script src="js/login&signup.js"></script>
   </body>
 </html>
