@@ -1,16 +1,23 @@
 const express = require("express");
-const User = require("../models/User");
 const router = express.Router();
 const userController = require("../controllers/userController");
+const passport = require("passport");
+const logedIn = require("../middlewares/loginControl");
 
-router.get("/", (req, res) => {
-  res.render("home");
-});
+const homeController = require("../controllers/homeController");
 
-router.get("/register", (req, res) => {
-  res.render("registro");
-});
+// router.get("/", logedIn, userController.showHome);
+router.get("/", logedIn, homeController.tweetList);
+router.get("/signIn", userController.showSignIn);
+router.post(
+  "/signIn",
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/signIn",
+  })
+);
 
-router.post("/register", userController.newRegister);
+router.get("/signUp", userController.showSignUp);
+router.post("/signUp", userController.validateSignUp);
 
 module.exports = router;

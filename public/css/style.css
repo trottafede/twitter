@@ -89,8 +89,13 @@ a {
 
 .avatar {
   background: #fff;
+<<<<<<< HEAD
   background-image: url(/public/uploads/foto\ personal.jpg);
+=======
+  background-image: url(/uploads/fotopersonal.jpg);
+>>>>>>> 44dead27b6c6bdbce1ba28d4d7953a8640f44df8
   border: 5px solid #fff;
+background-size: cover;
   border-radius: 50%;
   height: 200px;
   position: relative;

@@ -1,13 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Tweet = new Schema({
-  text: String(140),
-  autor: String,
-  createdAt: { type: Date, default: Date.now },
-  likes: Number,
-});
+const tweetSchema = new Schema(
+  {
+    text: { type: String, maxlength: 140 },
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+    likes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+  },
+  { timestamps: true }
+);
 
-// time stamp? consultar createdAt
-
-module.exports = mongoose.model("tweets", Tweet);
+module.exports = mongoose.model("Tweet", tweetSchema);
