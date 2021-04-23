@@ -1,14 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
-
+const passport = require("passport");
 const logedIn = require("../middlewares/loginControl");
 
 router.get("/", logedIn, userController.showHome);
 
 router.get("/signIn", userController.showSignIn);
-const passport = require("passport");
-
 router.post(
   "/signIn",
   passport.authenticate("local", {

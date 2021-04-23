@@ -1,6 +1,5 @@
 const path = require("path");
 const express = require("express");
-const morgan = require("morgan");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -8,8 +7,11 @@ const app = express();
 
 //Conectando a base de datos
 mongoose
-  .connect("mongodb+srv://root:root@cluster0.5r57u.mongodb.net/test")
-  .then((db) => console.log("Connected to DB"))
+  .connect("mongodb+srv://root:root@cluster0.5r57u.mongodb.net/test", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((db) => console.log("Conectados a la base de datos"))
   .catch((err) => console.log(err));
 
 //Importo rutas
@@ -17,12 +19,11 @@ const tweets = require("./routes/tweets");
 const users = require("./routes/users");
 
 //Settings
-app.set("port", process.env.PORT || 4500);
+app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 
 //Middlewares
-app.use(morgan("dev")); // Estilo monitor
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false })); // Para recibir Json.
 
@@ -46,7 +47,6 @@ app.use(
 );
 
 app.use(passport.initialize());
-
 app.use(passport.session());
 
 passport.use(
@@ -60,7 +60,6 @@ passport.use(
       try {
         console.log("Datos ingresados: " + username + " " + password);
         const user = await User.findOne({ email: username });
-        console.log(user);
         if (!user) {
           console.log("Usuario incorrecto");
           return done(null, false, {
