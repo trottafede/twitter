@@ -75,13 +75,13 @@ a {
 
 .profile-background {
   height: 320px;
-  background-image: url("https://pbs.twimg.com/profile_banners/439335622/1496682615/1500x500");
+  background-image: url("/public/uploads/foto\ personal.jpg");
 }
 
 /* Main avatar */
 .avatar-container {
-  bottom: -87px;
-  left: 10px;
+  bottom: -70px;
+  left: -10px;
   position: absolute;
   transition: bottom 0.3s;
   z-index: 3;
@@ -89,8 +89,9 @@ a {
 
 .avatar {
   background: #fff;
-  background-image: url(https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_400x400.jpg);
+  background-image: url(/uploads/fotopersonal.jpg);
   border: 5px solid #fff;
+background-size: cover;
   border-radius: 50%;
   height: 200px;
   position: relative;

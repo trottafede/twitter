@@ -4,8 +4,10 @@ const userController = require("../controllers/userController");
 const passport = require("passport");
 const logedIn = require("../middlewares/loginControl");
 
-router.get("/", logedIn, userController.showHome);
+const homeController = require("../controllers/homeController");
 
+// router.get("/", logedIn, userController.showHome);
+router.get("/", logedIn, homeController.tweetList);
 router.get("/signIn", userController.showSignIn);
 router.post(
   "/signIn",

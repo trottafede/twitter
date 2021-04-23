@@ -4,10 +4,11 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
+const seeder = require("./seeder");
 
 //Conectando a base de datos
 mongoose
-  .connect("mongodb+srv://root:root@cluster0.5r57u.mongodb.net/test", {
+  .connect(process.env.CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -19,7 +20,7 @@ const tweets = require("./routes/tweets");
 const users = require("./routes/users");
 
 //Settings
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 4500);
 app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 
@@ -96,7 +97,8 @@ passport.deserializeUser(function (id, done) {
 
 //routes
 //Ejemplo
-app.use("/", users);
+app.use(users);
+app.use(tweets);
 
 //Inicio Server
 app.listen(app.get("port"), () => {
