@@ -30,9 +30,9 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false })); // Para recibir Json.
 
 // passport.js
-
-const passport = require("./passport");
+const passport = require("./middlewares/passport");
 passport(app);
+
 //routes
 //Ejemplo
 app.use(users);
