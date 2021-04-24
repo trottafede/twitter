@@ -118,6 +118,9 @@ a {
 .content {
   padding: 8px;
 }
+
+.fa.fa-heart-o {
+}
 .profile-stats ul {
   margin: 0;
   list-style: none;

@@ -106,38 +106,22 @@
       </div>
            
           </li>
-          <% tweets.forEach(item=>{ %> 
-          <li class="tweet-card">
-            <div class="resultados">
-              <img class="avatar miniavatar"  src="<%= user.profilePicture %> " alt="">
-              <div class="content">
-                <p>@<%= item.user ? item.user.userName : item.author %></p>
-                <p><%= item.text %></p>
-                <p><%= item.createdAt %></p>
-                <!-- <button type="submit" class=""><i class="fa fa-heart-o" aria-hidden="true"></i></button> -->
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-retweet" aria-hidden="true"></i></a>
-              </div>
-              
-
-            </div>
-          </li>
-          <% }); %> 
+       
+          <% tweets.forEach(item=>{ %>
           <li class="tweet-card">
             <div class="tweet-content">
               <div class="tweet-header">
                 <span class="fullname">
-                  <strong>Jon Vadillo</strong>
+                  <strong><%= user.firstName%> <%= user.lastName%></strong>
                 </span>
-                <span class="username">@JonVadillo</span>
-                <span class="tweet-time">- Jul 18</span>
+                <span class="username">@<%= item.user ? item.user.userName : item.author %></span>
+                <span class="tweet-time">-<%= item.createdAt %></span>
               </div>
               <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                <img class="tweet-card-avatar" src="<%= user.profilePicture %> " alt="">
               </a>
               <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                <p class="" lang="es" data-aria-label-part="0"><%= item.text %>
                   <a href="" class="twitter-hashtag" dir="ltr"></a>
                 </p>
               </div>
@@ -149,7 +133,7 @@
                   <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
                 </a>
                 <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                  <i class="fa fa-heart-o" aria-hidden="true"></i><span> 0</span>
                 </a>
                 <a class="tweet-footer-btn">
                   <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
@@ -157,6 +141,7 @@
               </div>
             </div>
           </li>
+          <% }); %>
           <li class="tweet-card">
             <!-- <div class="tweet-content">
               <div class="tweet-header">
