@@ -102,7 +102,7 @@
 
     <label for="text">Que estoy pensando?</label>
   <input type="text" name="text" id="text" class="form-control mb-3"  >
-  <button type="submit" class="btn btn-success">Enviar</button>
+  <button type="submit" class="btn btn-success">Send tweet</button>
   </form>
 </div>
             <!-- <div class="tweet-content">
@@ -137,14 +137,15 @@
               </div>
             </div> -->
           </li>
-  <% tweets.forEach(item=>{ %> 
-          <li class="tweet-card">
-<div class="resultados">
-  <p><%= item.author %></p>
-  <p><%= item.text %></p>
-<p><%= item.createdAt %></p>
-</div>
-          </li>
+          <% tweets.forEach(item=>{ %> 
+            <li class="tweet-card">
+              <div class="resultados">
+                <p><%= item.author %></p>
+                <p><%= item.text %></p>
+                <p><%= item.createdAt %></p>
+                
+              </div>
+            </li>
           <% }); %> 
           <li class="tweet-card">
             <!-- <div class="tweet-content">
