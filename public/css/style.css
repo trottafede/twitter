@@ -89,13 +89,9 @@ a {
 
 .avatar {
   background: #fff;
-<<<<<<< HEAD
-  background-image: url(/public/uploads/foto\ personal.jpg);
-=======
-  background-image: url(/uploads/fotopersonal.jpg);
->>>>>>> 44dead27b6c6bdbce1ba28d4d7953a8640f44df8
+  /* background-image: url(/uploads/fotopersonal.jpg); */
   border: 5px solid #fff;
-background-size: cover;
+  background-size: cover;
   border-radius: 50%;
   height: 200px;
   position: relative;
@@ -110,6 +106,18 @@ background-size: cover;
   padding-bottom: 0;
 }
 
+.resultados {
+  display: flex;
+}
+
+.miniavatar {
+  height: 80px;
+  width: 80px;
+}
+
+.content {
+  padding: 8px;
+}
 .profile-stats ul {
   margin: 0;
   list-style: none;

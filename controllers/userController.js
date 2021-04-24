@@ -65,6 +65,7 @@ const validateSignUp = async (req, res) => {
           firstName: firstName,
           lastName: lastName,
           userName: userName,
+          profilePicture: "./uploads/surf_featured_1.jpg",
           email: email,
           password: hash,
         });

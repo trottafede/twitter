@@ -4,14 +4,14 @@ const Schema = mongoose.Schema;
 const tweetSchema = new Schema(
   {
     text: { type: String, maxlength: 140 },
-    author: {
+    user: {
       type: Schema.Types.ObjectId,
-      ref: "User",
+      ref: "user",
     },
     likes: [
       {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
       },
     ],
   },

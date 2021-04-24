@@ -4,13 +4,14 @@ const User = require("../models/User");
 const router = express.Router();
 
 module.exports = {
-  tweetList: router.get("/", async (req, res) => {
+  index: router.get("/", async (req, res) => {
     const tweets = await Tweet.find()
-    .populate("user")
-    .limit(20)
-    .sort({ createdAt: "desc" });
-  res.render("home", { tweets });
+      .populate("user")
+      .limit(20)
+      .sort({ createdAt: "desc" });
 
+    console.log(tweets[0]);
+    res.render("home", { user: req.user, tweets });
   }),
 };
 /* 

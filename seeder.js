@@ -43,7 +43,7 @@ const seeder = async () => {
   for (let i = 0; i < 5; i++) {
     tweets.push({
       text: faker.lorem.sentence(10),
-      user: usersIds[Math.floor(Math.random() * usersIds.length)],
+      author: usersIds[Math.floor(Math.random() * usersIds.length)],
     });
   }
 
