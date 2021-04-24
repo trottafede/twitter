@@ -1,8 +1,9 @@
 footer {
+  margin: 30px 0 0 0;
   padding: 30px 0 30px 0;
   background-color: #e6ecf0;
   color: black;
-  font-weight: lighter;
+  font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -12,5 +13,5 @@ footer a {
 }
 
 footer i {
-  padding: 0 10px 0 0;
+  padding: 0 30px 0 0;
 }

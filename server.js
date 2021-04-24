@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-const seeder = require("./seeder");
+// const seeder = require("./seeder");
 // seeder();
 
 //Conectando a base de datos
