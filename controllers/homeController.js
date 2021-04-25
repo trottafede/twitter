@@ -13,7 +13,7 @@ module.exports = {
     console.log("Logeado como: " + req.user);
     const user = req.user;
 
-    const tweets = await Tweet.find()
+    const tweets = await Tweet.find({ author: req.user._id })
       .populate("user")
       .limit(20)
       .sort({ createdAt: "desc" });

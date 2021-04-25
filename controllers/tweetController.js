@@ -1,15 +1,18 @@
-const express = require("express");
 const Tweet = require("../models/Tweet");
 const User = require("../models/User");
-const router = express.Router();
+
+const newTweet = async (req, res) => {
+  console.log("texto es: " + req.body.text + " de: " + req.user._id);
+  const { text } = req.body;
+
+  const tweets = new Tweet({ text, author: req.user });
+
+  await tweets.save();
+  res.redirect("/");
+};
 
 module.exports = {
-  newTweet: router.post("/create", async (req, res) => {
-    const { text } = req.body;
-    const tweets = new Tweet({ text, user: req.user });
-    await tweets.save();
-    res.redirect("/");
-  }),
+  newTweet,
 };
 
 /* 
