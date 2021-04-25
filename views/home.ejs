@@ -180,10 +180,18 @@
                       <i class="octicon octicon-sync" aria-hidden="true"></i
                       ><span> 64</span>
                     </a>
-                    <a class="tweet-footer-btn">
-                      <i class="octicon octicon-heart" aria-hidden="true"></i
-                      ><span> 202</span>
-                    </a>
+
+                    <form action="/like" method="POST">
+                      <input
+                        type="hidden"
+                        name="tweetId"
+                        value="<%= item._id %>"
+                      />
+                      <button class="tweet-footer-btn" type="submit">
+                        <i class="octicon octicon-heart" aria-hidden="true"></i
+                        ><span><%= item.likes %> </span>
+                      </button>
+                    </form>
                     <a class="tweet-footer-btn">
                       <i class="octicon octicon-mail" aria-hidden="true"></i
                       ><span> 155</span>

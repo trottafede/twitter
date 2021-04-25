@@ -11,8 +11,20 @@ const newTweet = async (req, res) => {
   res.redirect("/");
 };
 
+const createLike = async (req, res) => {
+  console.log("createLike", req.body);
+  //conseguir el tweet que el usuario hace like
+  let tweet = await Tweet.findById(req.body.tweetId);
+  console.log(tweet);
+  //al campo like [] agregarle id del usuario que hace click
+  tweet.likes.push(req.user);
+  await tweet.save();
+  res.redirect("/");
+};
+
 module.exports = {
   newTweet,
+  createLike,
 };
 
 /* 
