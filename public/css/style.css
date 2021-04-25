@@ -80,7 +80,8 @@ a:hover {
 
 .profile-background {
   height: 320px;
-  background-image: url("/public/uploads/foto\ personal.jpg");
+  background-image: url("https://jooinn.com/images/nature-background-30.jpg");
+  background-size: contain;
 }
 
 /* Main avatar */
@@ -92,9 +93,9 @@ a:hover {
   z-index: 3;
 }
 
-.avatar {
+.avatar img {
   background: #fff;
-  background-image: url(/uploads/fotopersonal.jpg);
+  /* background-image: url(/uploads/fotopersonal.jpg); */
   border: 5px solid #fff;
   background-size: cover;
   border-radius: 50%;

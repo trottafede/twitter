@@ -52,7 +52,9 @@
         <div class="container">
           <!-- User main avatar -->
           <div class="avatar-container">
-            <div class="avatar"></div>
+            <div class="avatar">
+              <img src="<%= user.image %>" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -117,8 +119,11 @@
           <!-- Left column -->
           <div class="profile-header">
             <!-- Header information -->
-            <h3 class="profile-fullname"><a>Martín Vlasanovich</a></h3>
-            <h2 class="profile-element"><a>@martinvlasa</a></h2>
+            <h3 class="profile-fullname">
+              <a><%= user.firstName %> <%= user.lastName %></a>
+            </h3>
+            <a href="/editProfile">Editar perfil</a>
+            <h2 class="profile-element"><a>@<%= user.userName %> </a></h2>
             <a class="profile-element profile-website" hrerf=""
               ><i class="octicon octicon-link"></i>&nbsp;martinvlasa.com</a
             >
@@ -127,31 +132,12 @@
               Uruguay</a
             >
             <h2 class="profile-element">
-              <i class="octicon octicon-calendar"></i>Joined November 2020
+              <i class="octicon octicon-calendar"></i>Creado: <%=
+              user.createdAt.toDateString() %>
             </h2>
             <button class="btn btn-search-bar tweet-to-btn">
-              Tweet to Martín Vlasanovich
+              Tweet to <%= user.firstName %> <%= user.lastName %>
             </button>
-            <a class="profile-element profile-website" hrerf=""
-              ><i class="octicon octicon-file-media"></i>1,142 Photos and
-              videos</a
-            >
-            <div class="pic-grid">
-              <!-- Image grid -->
-              <!-- <div class="row">
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div>
-            </div> -->
-              <!-- End: row -->
-              <!-- <div class="row">
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div>
-            </div> -->
-              <!-- End: row -->
-            </div>
-            <!-- End: image grid -->
           </div>
         </div>
         <!-- End; Left column -->

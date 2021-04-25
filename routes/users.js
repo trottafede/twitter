@@ -7,7 +7,8 @@ const logedIn = require("../middlewares/loginControl");
 const homeController = require("../controllers/homeController");
 
 // router.get("/", logedIn, userController.showHome);
-router.get("/", logedIn, homeController.tweetList);
+router.get("/", logedIn, homeController.userHome);
+
 router.get("/signIn", userController.showSignIn);
 router.post(
   "/signIn",
@@ -20,6 +21,9 @@ router.post(
 router.get("/signUp", userController.showSignUp);
 router.post("/signUp", userController.validateSignUp);
 
-router.get("/logout", homeController.logout);
+router.get("/editProfile", logedIn, userController.editProfile);
+router.post("/editProfile", logedIn, userController.validateEditProfile);
+
+router.get("/logout", logedIn, homeController.logout);
 
 module.exports = router;
