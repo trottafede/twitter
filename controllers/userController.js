@@ -40,7 +40,7 @@ const validateSignUp = async (req, res) => {
   const lastName = req.body.lastName;
   const userName = req.body.userName;
   const email = req.body.email;
-  const image = faker.image.animals();
+  const image = faker.image.avatar();
   let password = req.body.password;
 
   // Falta validar usuario no repetido
