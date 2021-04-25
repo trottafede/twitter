@@ -12,3 +12,14 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.backgroundIMG {
+  background-image: url("/img/twitterbg.png");
+  width: auto;
+  height: auto;
+  min-height: 500px;
+  min-width: 500px;
+
+  background-size: auto;
+  background-repeat: no-repeat;
+}

@@ -4,7 +4,12 @@ body {
 }
 
 a {
-  color: #1da1f2;
+  text-decoration: none;
+  color: inherit;
+  /* color: #1da1f2; */
+}
+a:hover {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1236px) {
@@ -91,7 +96,7 @@ a {
   background: #fff;
   background-image: url(/uploads/fotopersonal.jpg);
   border: 5px solid #fff;
-background-size: cover;
+  background-size: cover;
   border-radius: 50%;
   height: 200px;
   position: relative;

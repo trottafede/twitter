@@ -12,6 +12,10 @@ footer a {
   color: inherit;
 }
 
+footer a:hover {
+  text-decoration: none;
+}
+
 footer i {
-  padding: 0 30px 0 0;
+  padding: 0 20px 0 0;
 }

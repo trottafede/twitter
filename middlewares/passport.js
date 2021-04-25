@@ -21,14 +21,14 @@ module.exports = (app) => {
   passport.use(
     new LocalStrategy(
       {
-        usernameField: "email",
+        usernameField: "username",
         passReqToCallback: true,
         session: false,
       },
       async function (req, username, password, done) {
         try {
           console.log("Datos ingresados: " + username + " " + password);
-          const user = await User.findOne({ email: username });
+          const user = await User.findOne({ userName: username });
           if (!user) {
             console.log("Usuario incorrecto");
             return done(null, false, {
