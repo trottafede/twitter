@@ -4,3 +4,22 @@
   display: flex;
   justify-content: center;
 }
+#main_page {
+  min-height: 800px;
+}
+.backgroundIMG {
+  background-image: url("/img/twitterbg.png");
+  width: auto;
+  height: auto;
+  min-height: 500px;
+  min-width: 500px;
+
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
+
+  transform: scaleX(-1);
+
+  background-size: auto;
+  background-repeat: no-repeat;
+}

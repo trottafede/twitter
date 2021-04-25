@@ -1,317 +1,274 @@
 <!DOCTYPE html>
-<html >
-<%- include("partials/head") %>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <!-- CSS BOOSTRAP 4.0 -->
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css"
+    />
 
-  <%- include("partials/navbar") %>
-  <!-- Fixed top navbar -->
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
-<!-- END: Fixed top navbar -->
-<div class="main-container">
-  <!-- Profile background large image -->
-  <div class="row profile-background">
-    <div class="container">
-	  <!-- User main avatar -->
-      <div class="avatar-container">
-        <div class="avatar">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom css-->
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-        </div>
-      </div>
-    </div>
-  </div>
+    <title>Home</title>
+  </head>
 
-  <nav class="navbar profile-stats">
-    <div class="container">
-      <div class="row">
-        <div class="col">
+  <body>
+    <%- include("partials/navbar") %>
+    <!-- Fixed top navbar -->
 
-        </div>
-        <div class="col-6">
-          <ul>
-            <li class="profile-stats-item-active">
-              <a>
-                <span class="profile-stats-item profile-stats-item-label">Tweets</span>
-                <span class="profile-stats-item profile-stats-item-number"></span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="profile-stats-item profile-stats-item-label">Following</span>
-                <span class="profile-stats-item profile-stats-item-number"></span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="profile-stats-item profile-stats-item-label">Followers</span>
-                <span class="profile-stats-item profile-stats-item-number"></span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="profile-stats-item profile-stats-item-label">Likes</span>
-                <span class="profile-stats-item profile-stats-item-number"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col">
-
-        </div>
-      </div>
-    </div>
-  </nav>
-  <div class="container main-content">
-    <div class="row">
-      <div class="col profile-col">
-        <!-- Left column -->
-        <div class="profile-header">
-          <!-- Header information -->
-          <h3 class="profile-fullname"><a>Martín Vlasanovich<a></h3>
-          <h2 class="profile-element"><a>@martinvlasa</a></h2>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-link"></i>&nbsp;martinvlasa.com</a>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-location"></i>&nbsp;Montevideo, Uruguay</a>
-          <h2 class="profile-element"><i class="octicon octicon-calendar"></i>Joined November 2020</h2>
-          <button class="btn btn-search-bar tweet-to-btn">Tweet to Martín Vlasanovich</button>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-file-media"></i>1,142 Photos and videos</a>
-          <div class="pic-grid">
-            <!-- Image grid -->
-            <!-- <div class="row">
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div>
-            </div> -->
-            <!-- End: row -->
-            <!-- <div class="row">
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div>
-            </div> -->
-            <!-- End: row -->
+    <section id="main_page">
+      <!-- END: Fixed top navbar -->
+      <div class="main-container">
+        <!-- Profile background large image -->
+        <!-- <div class="row profile-background"> -->
+        <div class="container">
+          <!-- User main avatar -->
+          <div class="avatar-container">
+            <div class="avatar">
+              <!-- <img src="<%= user.image %>" alt="" /> -->
+            </div>
           </div>
-          <!-- End: image grid -->
         </div>
       </div>
-      <!-- End; Left column -->
-      <!-- Center content column -->
-      <div class="col-6">
-        <ol class="tweet-list">
-          <li class="tweet-card">
-<div class="tweetForm">
-  <form action="/create" method="POST">
 
-    <label for="text">Que estoy pensando?</label>
-  <input type="text" name="text" id="text" class="form-control mb-3"  >
-  <button type="submit" class="btn btn-success">Enviar</button>
-  </form>
-</div>
-            <!-- <div class="tweet-content">
-              <div class="tweet-header">
-                <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                <span class="username">@JonVadillo</span>
-                <span class="tweet-time">- Jul 18</span>
-              </div>
-              <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-              </a>
-              <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
-                  <a href="" class="twitter-hashtag" dir="ltr"></a>
-                </p>
-              </div>
-              <div class="tweet-footer">
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                </a>
-              </div>
-            </div> -->
-          </li>
-  <% tweets.forEach(item=>{ %> 
-          <li class="tweet-card">
-<div class="resultados">
-  <p><%= item.author %></p>
-  <p><%= item.text %></p>
-<p><%= item.createdAt %></p>
-</div>
-          </li>
-          <% }); %> 
-          <li class="tweet-card">
-            <!-- <div class="tweet-content">
-              <div class="tweet-header">
-                <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                <span class="username">@JonVadillo</span>
-                <span class="tweet-time">- Jul 18</span>
-              </div>
-              <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-              </a>
-              <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
-                  <a href="" class="twitter-hashtag" dir="ltr"></a>
-                </p>
-              </div>
-              <div class="tweet-footer">
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                </a>
-              </div>
-            </div> -->
-          </li>
-          <li class="tweet-card">
-            <!-- <div class="tweet-content">
-              <div class="tweet-header">
-                <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                <span class="username">@JonVadillo</span>
-                <span class="tweet-time">- Jul 18</span>
-              </div>
-              <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-              </a>
-              <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
-                  <a href="" class="twitter-hashtag" dir="ltr"></a>
-                </p>
-              </div>
-              <div class="tweet-footer">
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                </a>
-              </div>
-            </div> -->
-          </li>
-          <li class="tweet-card">
-            <!-- <div class="tweet-content">
-              <div class="tweet-header">
-                <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                <span class="username">@JonVadillo</span>
-                <span class="tweet-time">- Jul 18</span>
-              </div>
-              <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-              </a>
-              <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
-                  <a href="" class="twitter-hashtag" dir="ltr"></a>
-                </p>
-              </div>
-              <div class="tweet-footer">
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                </a>
-              </div>
-            </div> -->
-          </li>
-        </ol>
-        <!-- End: tweet list -->
-      </div>
-      <!-- End: Center content column -->
-      <div class="col right-col">
-        <div class="content-panel">
-          <div class="panel-header">
-            <h4>Who to follow</h4>    
-            <!-- <small> <a href="">Refresh</a></small><small><a href="">View all</a> 
-            </small>  -->
+      <nav class="navbar profile-stats">
+        <div class="container">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+              <ul>
+                <li class="profile-stats-item-active">
+                  <a>
+                    <span class="profile-stats-item profile-stats-item-label"
+                      >Tweets</span
+                    >
+                    <span
+                      class="profile-stats-item profile-stats-item-number"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="profile-stats-item profile-stats-item-label"
+                      >Following</span
+                    >
+                    <span
+                      class="profile-stats-item profile-stats-item-number"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="profile-stats-item profile-stats-item-label"
+                      >Followers</span
+                    >
+                    <span
+                      class="profile-stats-item profile-stats-item-number"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="profile-stats-item profile-stats-item-label"
+                      >Likes</span
+                    >
+                    <span
+                      class="profile-stats-item profile-stats-item-number"
+                    ></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col"></div>
           </div>
-          <!-- Who to Follow panel -->
-          <div class="panel-content">
-            <!--Follow list -->
+        </div>
+      </nav>
+
+      <div class="container main-content">
+        <div class="row">
+          <div class="col-lg-4 profile-col">
+            <!-- Left column -->
+            <div class="profile-header">
+              <!-- Header information -->
+<div>
+  <h4 class="mb-4 text-center">Break News</h4>
+  <hr>
+  <h5>The end of bitcoins?</h5>
+  <p>The cryptocurrency has lost its value, reaching a loss of 74% according to statistics published on ecoglobal.net </p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+  <hr>
+</div>
+<div>
+  <h5>The railway station hosting the Oscars</h5>
+  <p>Union Station in Los Angeles will be one of the venues for this year's Oscars.</p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+<hr>
+</div>
+<div>
+  <h5>Countries send urgent aid to Covid-stricken India</h5>
+  <p>The UK is sending oxygen machines and ventilators while France and the US are also sending supplies.</p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+  <hr>
+</div>
+            </div>
+          </div>
+          <!-- End; Left column -->
+          <!-- Center content column -->
+          <div class="col-lg-5">
             <ol class="tweet-list">
+              <% arrayDeTweet.forEach(item=>{ %>
               <li class="tweet-card">
-                <!-- <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                <div class="tweet-content">
                   <div class="tweet-header">
                     <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                    <span class="username">@JonVadillo</span>
+                      <strong
+                        ><%= item.firstName %> <%= item.lastName %></strong
+                      >
+                    </span>
+                    <span class="username">@<%= item.userName %></span>
+                    <span class="tweet-time"
+                      ><%= item.tweetDate.toDateString() %></span
+                    >
                   </div>
-
-                  <button class="btn btn-follow">Follow</button>
-                </div> -->
-              </li>
-              <li class="tweet-card">
-                <!-- <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-                  <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                    <span class="username">@JonVadillo</span>
+                  <a>
+                    <img
+                      class="tweet-card-avatar"
+                      src="<%= item.image %>"
+                      alt="profile pic"
+                    />
+                  </a>
+                  <div class="tweet-text">
+                    <p class="" lang="es" data-aria-label-part="0">
+                      <%= item.tweet %>
+                    </p>
                   </div>
-
-                  <button class="btn btn-follow">Follow</button>
-                </div> -->
-              </li>
-              <li class="tweet-card">
-                <!-- <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-                  <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                    <span class="username">@JonVadillo</span>
+                  <div class="tweet-footer">
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-comment" aria-hidden="true"></i
+                      ><span> 18</span>
+                    </a>
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-sync" aria-hidden="true"></i
+                      ><span> 64</span>
+                    </a>
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-heart" aria-hidden="true"></i
+                      ><span> 202</span>
+                    </a>
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-mail" aria-hidden="true"></i
+                      ><span> 155</span>
+                    </a>
                   </div>
-
-                  <button class="btn btn-follow">Follow</button>
-                </div> -->
+                </div>
               </li>
+              <% }); %>
             </ol>
-            <!--END: Follow list -->
+            <!-- End: tweet list -->
+          </div>
+          <!-- End: Center content column -->
+          <div class="col-lg-3 right-col">
+            <div class="content-panel">
+              <div class="panel-header">
+                <h4>Who to follow</h4>
+                <!-- <small> <a href="">Refresh</a></small><small><a href="">View all</a> 
+            </small>  -->
+              </div>
+              <!-- Who to Follow panel -->
+              <div class="panel-content">
+                <!--Follow list -->
+                <ol class="tweet-list">
+                  <li class="tweet-card">
+                    <div class="tweet-content">
+                      <img
+                        class="tweet-card-avatar"
+                        src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                        alt=""
+                      />
+                      <div class="tweet-header">
+                        <span class="fullname">
+                          <strong>Jon Vadillo</strong>
+                        </span>
+                        <span class="username">@JonVadillo</span>
+                      </div>
+
+                      <button class="btn btn-follow">Follow</button>
+                    </div>
+                  </li>
+                  <li class="tweet-card">
+                    <div class="tweet-content">
+                      <img
+                        class="tweet-card-avatar"
+                        src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                        alt=""
+                      />
+                      <div class="tweet-header">
+                        <span class="fullname">
+                          <strong>Jon Vadillo</strong>
+                        </span>
+                        <span class="username">@JonVadillo</span>
+                      </div>
+
+                      <button class="btn btn-follow">Follow</button>
+                    </div>
+                  </li>
+                  <li class="tweet-card">
+                    <div class="tweet-content">
+                      <img
+                        class="tweet-card-avatar"
+                        src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                        alt=""
+                      />
+                      <div class="tweet-header">
+                        <span class="fullname">
+                          <strong>Jon Vadillo</strong>
+                        </span>
+                        <span class="username">@JonVadillo</span>
+                      </div>
+
+                      <button class="btn btn-follow">Follow</button>
+                    </div>
+                  </li>
+                </ol>
+                <!--END: Follow list -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <%- include("partials/footer") %>
-    </div>
-   
-  </div>
-  <script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+    </section>
 
-  
-</body>
+    <%- include("partials/footer") %>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  </body>
 </html>

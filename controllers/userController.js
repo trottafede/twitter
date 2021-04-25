@@ -1,16 +1,6 @@
 const User = require("../models/User");
 
 const showHome = async (req, res) => {
-  // Conectar a la base de datos
-  // encontrar mis tweets que quiero agregar a la home
-  // Pasarselos a la home
-  try {
-    const users = await User.find({});
-    console.log(users);
-  } catch (err) {
-    throw err;
-  }
-
   // res.render("home", users);
 };
 const showSignIn = (req, res) => {
@@ -23,7 +13,7 @@ const validateSignIn = async (req, res) => {
   // validar datos de entrada
   // comparar con el backend
   // redirigir al home
-  res.render("home");
+  res.render("userHome");
 };
 
 const showSignUp = (req, res) => {
@@ -35,13 +25,17 @@ const showSignUp = (req, res) => {
 const validateSignUp = async (req, res) => {
   const bcrypt = require("bcrypt");
   var validator = require("email-validator");
+  const faker = require("faker");
 
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const userName = req.body.userName;
   const email = req.body.email;
+  const image = faker.image.avatar();
+  let bio = req.body.bio;
   let password = req.body.password;
 
+  bio = "mi bio";
   // Falta validar usuario no repetido
 
   bcrypt.genSalt(10, function (err, salt) {
@@ -66,7 +60,9 @@ const validateSignUp = async (req, res) => {
           lastName: lastName,
           userName: userName,
           email: email,
+          image: image,
           password: hash,
+          bio: bio,
         });
 
         newUser.save((error, savvedNewUser) => {
@@ -84,10 +80,42 @@ const validateSignUp = async (req, res) => {
   });
 };
 
+const editProfile = (req, res) => {
+  // muestro mi página de registro
+  // console.log(req.user._id);
+  const user = req.user;
+  res.render("editProfile", { user });
+};
+
+const validateEditProfile = async (req, res) => {
+  const updateProfile = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      image: req.body.image,
+      bio: req.body.bio,
+    },
+    { useFindAndModify: false },
+    function (err, docs) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Updated User : ", docs);
+      }
+    }
+  );
+
+  res.redirect("/");
+};
+
 module.exports = {
   showHome,
   showSignIn,
   validateSignIn,
   showSignUp,
   validateSignUp,
+  editProfile,
+  validateEditProfile,
 };

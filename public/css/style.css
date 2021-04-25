@@ -3,8 +3,17 @@ body {
   padding-top: 54px;
 }
 
+#main_page {
+  min-height: 800px;
+}
+
 a {
-  color: #1da1f2;
+  text-decoration: none;
+  color: inherit;
+  /* color: #1da1f2; */
+}
+a:hover {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1236px) {
@@ -75,7 +84,8 @@ a {
 
 .profile-background {
   height: 320px;
-  background-image: url("/public/uploads/foto\ personal.jpg");
+  background-image: url("https://jooinn.com/images/nature-background-30.jpg");
+  background-size: contain;
 }
 
 /* Main avatar */
@@ -87,11 +97,11 @@ a {
   z-index: 3;
 }
 
-.avatar {
+.avatar img {
   background: #fff;
-  background-image: url(/uploads/fotopersonal.jpg);
+  /* background-image: url(/uploads/fotopersonal.jpg); */
   border: 5px solid #fff;
-background-size: cover;
+  background-size: cover;
   border-radius: 50%;
   height: 200px;
   position: relative;
@@ -149,10 +159,18 @@ background-size: cover;
 
 /* Left column*/
 .profile-header {
-  margin-top: 35px;
+  margin-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  background-color: white;
 }
+
+.profile-header .btn {
+padding: 5px;
+ }
+
 
 .profile-element {
   color: #657786;

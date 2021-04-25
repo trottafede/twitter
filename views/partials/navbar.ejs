@@ -14,17 +14,13 @@
   <div class="collapse navbar-collapse container">
     <!-- Navbar navigation links -->
     <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#"
+      <li class="nav-item active">
+        <a class="nav-link" href="/"
           ><i class="octicon octicon-home" aria-hidden="true"></i> Home
           <span class="sr-only">(current)</span></a
         >
-      </li> -->
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#"
-          ><i class="octicon octicon-zap"></i> Moments</a
-        >
-      </li> -->
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#"
           ><i class="octicon octicon-bell"></i> Notifications</a
@@ -56,21 +52,9 @@
     </form>
     <!-- END: Navbar Search form -->
     <!-- Navbar User menu -->
-    <div class="dropdown navbar-user-dropdown">
-      <button
-        class="btn btn-secondary dropdown-toggle btn-circle"
-        type="button"
-        id="dropdownMenuButton"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      ></button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
+    <a class="mr-3 ml-3" href="/user"><%= user.userName %></a>
+
+    <a class="mr-3 ml-3" href="/logout">Logout</a>
     <!-- END: Navbar User menu -->
     <!-- Navbar Tweet button -->
     <button class="btn btn-search-bar">Tweet</button>

@@ -13,6 +13,12 @@ const userSchema = new Schema(
       type: String,
       required: [true, "email Required"],
     },
+    bio: {
+      type: String,
+    },
+    image: {
+      type: String,
+    },
     password: String,
     description: String,
     profilePicture: String,
@@ -35,7 +41,7 @@ const userSchema = new Schema(
       },
     ],
   },
-  { timstamps: true }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("user", userSchema);
