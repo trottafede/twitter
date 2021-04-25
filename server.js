@@ -1,17 +1,15 @@
-require("dotenv").config();
 const path = require("path");
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 const app = express();
 // const seeder = require("./seeder");
 // seeder();
 
-const url = "mongodb+srv://root:root@cluster0.5r57u.mongodb.net/test";
-
 //Conectando a base de datos
 mongoose
-  .connect(url, {
+  .connect(process.env.CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -23,7 +21,7 @@ const tweets = require("./routes/tweets");
 const users = require("./routes/users");
 
 //Settings
-// app.set("port", process.env.PORT || 4500);
+app.set("port", process.env.PORT || 4500);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -41,6 +39,6 @@ app.use(users);
 app.use(tweets);
 
 //Inicio Server
-app.listen(3000, () => {
-  console.log(`Server running in http://localhost:3000`);
+app.listen(app.get("port"), () => {
+  console.log(`Server running in http://localhost:${app.get("port")}`);
 });
