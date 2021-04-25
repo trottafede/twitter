@@ -4,6 +4,9 @@
   display: flex;
   justify-content: center;
 }
+#main_page {
+  min-height: 800px;
+}
 .backgroundIMG {
   background-image: url("/img/twitterbg.png");
   width: auto;

@@ -6,7 +6,9 @@ footer {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
-
+#main_page {
+  min-height: 800px;
+}
 footer a {
   text-decoration: none;
   color: inherit;

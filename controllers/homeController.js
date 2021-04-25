@@ -26,7 +26,7 @@ const showHome = async (req, res) => {
   });
 
   setTimeout(() => {
-    console.log(arrayDeTweet);
+    // console.log(arrayDeTweet);
     res.render("home", { arrayDeTweet, user });
   }, 1000);
 };
@@ -44,7 +44,7 @@ const userHome = async (req, res) => {
     .populate("user")
     .limit(20)
     .sort({ createdAt: "desc" });
-  console.log(tweets);
+  // console.log(tweets);
   res.render("userHome", { tweets, user });
 };
 

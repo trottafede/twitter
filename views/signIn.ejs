@@ -16,69 +16,74 @@
     <title>Login</title>
   </head>
   <body>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-6">
-            <div class="backgroundIMG"></div>
-          </div>
-          <div class="col-md-12 col-lg-6 d-flex justify-content-center">
-            <div class="registro">
-              <form
-                class="row g-3 needs-validation"
-                action="/signIn"
-                method="POST"
-                novalidate
-              >
-                <div class="mb-3 d-flex justify-content-center">
-                  <h1>Ingrese</h1>
-                </div>
+    <section id="main_page">
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <div class="backgroundIMG"></div>
+            </div>
+            <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+              <div class="registro">
+                <form
+                  class="row g-3 needs-validation"
+                  action="/signIn"
+                  method="POST"
+                  novalidate
+                >
+                  <div class="mb-3 d-flex justify-content-center">
+                    <h1>Ingrese</h1>
+                  </div>
 
-                <div class="mb-3">
-                  <label for="username" class="form-label">username</label>
-                  <input
-                    id="username"
-                    type="text"
-                    class="form-control"
-                    name="username"
-                    placeholder="username"
-                    required
-                    minlength="4"
-                  />
-                  <div class="valid-feedback">Todo ok!</div>
-                  <div class="invalid-feedback">Ingresa username</div>
-                </div>
+                  <div class="mb-3">
+                    <label for="username" class="form-label">username</label>
+                    <input
+                      id="username"
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      placeholder="username"
+                      required
+                      minlength="4"
+                    />
+                    <div class="valid-feedback">Todo ok!</div>
+                    <div class="invalid-feedback">Ingresa username</div>
+                  </div>
 
-                <div class="mb-3 col-sm">
-                  <label for="password" class="form-label">Password</label>
-                  <input
-                    id="password"
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    placeholder="password"
-                    required
-                    minlength="4"
-                  />
-                  <div class="valid-feedback">Todo ok!</div>
-                  <div class="invalid-feedback">Ingresa password</div>
-                  <div class="invalid-feedback">Minimo 4 dígitos</div>
-                </div>
+                  <div class="mb-3 col-sm">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      id="password"
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="password"
+                      required
+                      minlength="4"
+                    />
+                    <div class="valid-feedback">Todo ok!</div>
+                    <div class="invalid-feedback">Ingresa password</div>
+                    <div class="invalid-feedback">Minimo 4 dígitos</div>
+                  </div>
 
-                <div class="mb-3">
-                  <a href="/signUp"><small>¿No tienes una cuenta?</small></a>
-                </div>
-                <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Entrar</button>
-                </div>
-              </form>
+                  <div class="mb-3">
+                    <a href="/signUp"><small>¿No tienes una cuenta?</small></a>
+                  </div>
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">
+                      Entrar
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <!-- Footer -->
+      <!-- Footer -->
+    </section>
+    <%- include("partials/footer") %>
 
     <!-- Bootstrap  JavaScript -->
     <script
@@ -86,7 +91,6 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
-    <%- include("partials/footer") %>
 
     <script src="js/login&signup.js"></script>
   </body>

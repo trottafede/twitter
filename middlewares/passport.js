@@ -27,7 +27,7 @@ module.exports = (app) => {
       },
       async function (req, username, password, done) {
         try {
-          console.log("Datos ingresados: " + username + " " + password);
+          // console.log("Datos ingresados: " + username + " " + password);
           const user = await User.findOne({ userName: username });
           if (!user) {
             console.log("Usuario incorrecto");

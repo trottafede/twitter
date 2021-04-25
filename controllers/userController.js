@@ -82,15 +82,12 @@ const validateSignUp = async (req, res) => {
 
 const editProfile = (req, res) => {
   // muestro mi página de registro
-  console.log(req.user._id);
+  // console.log(req.user._id);
   const user = req.user;
   res.render("editProfile", { user });
 };
 
 const validateEditProfile = async (req, res) => {
-  console.log(req.user);
-  console.log(req.body);
-
   const updateProfile = await User.findByIdAndUpdate(
     req.user._id,
     {

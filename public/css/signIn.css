@@ -1,6 +1,10 @@
 body {
   background-color: #e6ecf0;
 }
+
+#main_page {
+  min-height: 800px;
+}
 .registro {
   padding: 40px;
   margin: 40px auto 40px auto;
