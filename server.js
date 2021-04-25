@@ -1,7 +1,7 @@
+require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const app = express();
 // const seeder = require("./seeder");
@@ -22,7 +22,7 @@ const users = require("./routes/users");
 
 //Settings
 app.set("port", process.env.PORT || 4500);
-app.set("views", path.join(__dirname + "/views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 //Middlewares
