@@ -6,8 +6,7 @@ const router = express.Router();
 module.exports = {
   newTweet: router.post("/create", async (req, res) => {
     const { text } = req.body;
-    console.log(req.body);
-    const tweets = new Tweet({ text, author: "608289b9e6d11d3b381d2a8f" });
+    const tweets = new Tweet({ text, user: req.user });
     await tweets.save();
     res.redirect("/");
   }),
