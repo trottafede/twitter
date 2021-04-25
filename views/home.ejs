@@ -114,36 +114,35 @@
 
       <div class="container main-content">
         <div class="row">
-          <div class="col profile-col">
+          <div class="col-lg-4 profile-col">
             <!-- Left column -->
             <div class="profile-header">
               <!-- Header information -->
-              <h3 class="profile-fullname">
-                <a><%= user.firstName %> <%= user.lastName %></a>
-              </h3>
-              <a href="/editProfile">Editar perfil</a>
-              <h2 class="profile-element"><a>@<%= user.userName %> </a></h2>
-              <h2 class="profile-element"><a> <%= user.bio %> </a></h2>
-              <!-- <a class="profile-element profile-website" hrerf=""
-              ><i class="octicon octicon-link"></i>&nbsp; <%= user.bio %>
-            </a> -->
-
-              <a class="profile-element profile-website" hrerf=""
-                ><i class="octicon octicon-location"></i>&nbsp;Montevideo,
-                Uruguay</a
-              >
-              <h2 class="profile-element">
-                <i class="octicon octicon-calendar"></i>Creado: <%=
-                user.createdAt.toDateString() %>
-              </h2>
-              <button class="btn btn-search-bar tweet-to-btn">
-                Tweet to <%= user.firstName %> <%= user.lastName %>
-              </button>
+<div>
+  <h4 class="mb-4 text-center">Break News</h4>
+  <hr>
+  <h5>The end of bitcoins?</h5>
+  <p>The cryptocurrency has lost its value, reaching a loss of 74% according to statistics published on ecoglobal.net </p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+  <hr>
+</div>
+<div>
+  <h5>The railway station hosting the Oscars</h5>
+  <p>Union Station in Los Angeles will be one of the venues for this year's Oscars.</p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+<hr>
+</div>
+<div>
+  <h5>Countries send urgent aid to Covid-stricken India</h5>
+  <p>The UK is sending oxygen machines and ventilators while France and the US are also sending supplies.</p>
+  <button class="btn btn-secondary mb-3">Read more</button>
+  <hr>
+</div>
             </div>
           </div>
           <!-- End; Left column -->
           <!-- Center content column -->
-          <div class="col-6">
+          <div class="col-lg-4">
             <ol class="tweet-list">
               <% arrayDeTweet.forEach(item=>{ %>
               <li class="tweet-card">
@@ -196,7 +195,7 @@
             <!-- End: tweet list -->
           </div>
           <!-- End: Center content column -->
-          <div class="col right-col">
+          <div class="col-lg-4 right-col">
             <div class="content-panel">
               <div class="panel-header">
                 <h4>Who to follow</h4>

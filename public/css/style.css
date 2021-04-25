@@ -159,10 +159,18 @@ a:hover {
 
 /* Left column*/
 .profile-header {
-  margin-top: 35px;
+  margin-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  background-color: white;
 }
+
+.profile-header .btn {
+padding: 5px;
+ }
+
 
 .profile-element {
   color: #657786;
