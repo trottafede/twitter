@@ -13,6 +13,9 @@ const userSchema = new Schema(
       type: String,
       required: [true, "email Required"],
     },
+    bio: {
+      type: String,
+    },
     image: {
       type: String,
     },

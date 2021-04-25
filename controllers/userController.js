@@ -1,4 +1,3 @@
-const { findByIdAndUpdate } = require("../models/User");
 const User = require("../models/User");
 
 const showHome = async (req, res) => {
@@ -14,7 +13,7 @@ const validateSignIn = async (req, res) => {
   // validar datos de entrada
   // comparar con el backend
   // redirigir al home
-  res.render("home");
+  res.render("userHome");
 };
 
 const showSignUp = (req, res) => {
@@ -28,21 +27,15 @@ const validateSignUp = async (req, res) => {
   var validator = require("email-validator");
   const faker = require("faker");
 
-  // const formidable = require("formidable");
-
-  // const form = formidable({
-  //   multiples: true,
-  //   uploadDir: process.cwd() + "/public/img",
-  //   keepExtensions: true,
-  // });
-
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const userName = req.body.userName;
   const email = req.body.email;
   const image = faker.image.avatar();
+  let bio = req.body.bio;
   let password = req.body.password;
 
+  bio = "mi bio";
   // Falta validar usuario no repetido
 
   bcrypt.genSalt(10, function (err, salt) {
@@ -69,6 +62,7 @@ const validateSignUp = async (req, res) => {
           email: email,
           image: image,
           password: hash,
+          bio: bio,
         });
 
         newUser.save((error, savvedNewUser) => {
@@ -104,6 +98,7 @@ const validateEditProfile = async (req, res) => {
       lastName: req.body.lastName,
       email: req.body.email,
       image: req.body.image,
+      bio: req.body.bio,
     },
     { useFindAndModify: false },
     function (err, docs) {

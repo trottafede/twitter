@@ -65,6 +65,22 @@
               </div>
 
               <div class="mb-3 col-sm-12">
+                <label for="bio" class="form-label">Biografia</label>
+                <textarea
+                  class="form-control"
+                  name="bio"
+                  id="bio"
+                  cols="10"
+                  rows="5"
+                  minlength="10"
+                  placeholder="<%= user.bio %>"
+                ></textarea>
+                <div class="valid-feedback">Todo ok!</div>
+                <div class="invalid-feedback">Ingresa breve descripción</div>
+                <div class="invalid-feedback">Minimo 10 dígitos</div>
+              </div>
+
+              <div class="mb-3 col-sm-12">
                 <label for="username" class="form-label">Username</label>
                 <input
                   id="username"
@@ -103,7 +119,7 @@
                   type="text"
                   class="form-control"
                   name="image"
-                  placeholder="www.tuimagen.com"
+                  placeholder="<%= user.image %>"
                 />
               </div>
 
@@ -119,7 +135,10 @@
         </div>
 
         <div class="col-md-12 col-lg-6 d-flex justify-content-center">
-          <div><img src="/img/lomito.jpg" alt="" /></div>
+          <!-- User main avatar -->
+          <div class="avatar">
+            <img src="<%= user.image %>" alt="Profile picture" />
+          </div>
         </div>
       </div>
     </div>
