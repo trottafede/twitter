@@ -47,8 +47,13 @@ const showFollow = async (req, res) => {
    .populate("user")
    .limit(20)
    .sort({ createdAt: "desc" });
+
+   const followers = await User.find({ following: req.user._id })
+   .populate("user")
+   .limit(20)
+   .sort({ createdAt: "desc" });
  // console.log(tweets);
- res.render("userFollow", { user, following });
+ res.render("userFollow", { user, following, followers });
 };
  /* 
     const user = req.user;

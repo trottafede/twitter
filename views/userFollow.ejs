@@ -34,9 +34,9 @@
       rel="stylesheet"
     />
     <!-- Custom css-->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/signIn.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/signIn.css" />
 
     <title>Twitter Clone</title>
   </head>
@@ -107,98 +107,42 @@
       </div>
 
       <div class="container main-content">
-        <div class="row">
-          <div class="col-lg-4 profile-col">
-            <!-- Left column -->
-            <div class="profile-header">
-              <!-- Header information -->
-              <h3 class="profile-fullname">
-                <a><%= user.firstName %> <%= user.lastName %></a>
-              </h3>
-              <a href="/editProfile">Editar perfil</a>
-              <h2 class="profile-element"><a>@<%= user.userName %> </a></h2>
-              <h2 class="profile-element"><a> <%= user.bio %> </a></h2>
-              <!-- <a class="profile-element profile-website" hrerf=""
-              ><i class="octicon octicon-link"></i>&nbsp; <%= user.bio %>
-            </a> -->
-
-              <a class="profile-element profile-website" hrerf=""
-                ><i class="octicon octicon-location"></i>&nbsp;Montevideo,
-                Uruguay</a
-              >
-              <h2 class="profile-element">
-                <i class="octicon octicon-calendar"></i>Creado: <%=
-                user.createdAt.toDateString() %>
-              </h2>
-              <button class="btn btn-search-bar tweet-to-btn">
-                Tweet to <%= user.firstName %> <%= user.lastName %>
-              </button>
-            </div>
-          </div>
-          <!-- End; Left column -->
+        <div class="row mt-4">
           <!-- Center content column -->
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <ol class="tweet-list">
-              <!-- <li class="tweet-card">
-                <div class="tweetForm">
-                  <form action="/create" method="POST">
-                    <label for="text">Que estoy pensando?</label>
-                    <input
-                      type="text"
-                      name="text"
-                      id="text"
-                      class="form-control mb-3"
-                    />
-                    <button type="submit" class="btn btn-success">
-                      Send tweet
-                    </button>
-                  </form>
-                </div>
-              </li> -->
-              <% tweets.forEach(item=>{ %>
+              <h3>Following</h3>
+              <% following.forEach(item=>{ %>
               <li class="tweet-card">
                 <div class="resultados">
-                  <p><%= user.userName %></p>
-                  <p><%= item.text %></p>
-                  <p><%= item.createdAt.toDateString() %></p>
+                  <p>
+                    <%= item.firstName %> <%= item.lastName %> @<%=
+                    item.userName %>
+                  </p>
                 </div>
               </li>
               <% }); %>
-             
             </ol>
             <!-- End: tweet list -->
           </div>
           <!-- End: Center content column -->
-          <div class="col-lg-3 right-col">
-            <div class="content-panel">
-              <div class="panel-header">
-                <h4>Who to follow</h4>
-                <!-- <small> <a href="">Refresh</a></small><small><a href="">View all</a> 
-            </small>  -->
-              </div>
-              <!-- Who to Follow panel -->
-              <div class="panel-content">
-                <!--Follow list -->
-                <ol class="tweet-list">
-                  <% usersToFollow.forEach(usuarios =>{%>
-                  <li class="tweet-card">
-                    <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="<%= usuarios.image %>" alt="">
-                  <div class="tweet-header">
-                    <span class="fullname">
-                  <strong><%= usuarios.firstName.slice(0,1) %>. <%= usuarios.lastName %></strong>
-                </span>
-                    <span class="username">@<%= usuarios.userName %></span>
-                  </div>
-       <a href="/follow/<%= usuarios._id %>" class="btn btn-follow">Seguir</a>
-       <a href="/stop-follow/<%= usuarios._id %>" class="btn btn-unfollow">No Seguir</a>
-
+          <div class="col-lg-6">
+            <ol class="tweet-list">
+              <h3>Followers</h3>
+              <% followers.forEach(item=>{ %>
+              <li class="tweet-card">
+                <div class="resultados">
+                  <p>
+                    <%= item.firstName %> <%= item.lastName %> @<%=
+                    item.userName %>
+                  </p>
                 </div>
-                  </li>
-                  <% }); %></ol><!--END: Follow list -->
-              </div>
-            </div>
+              </li>
+              <% }); %>
+            </ol>
+            <!-- End: tweet list -->
           </div>
+          <!-- End: Center content column -->
         </div>
       </div>
     </section>
