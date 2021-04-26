@@ -79,7 +79,7 @@
                   <li>
                     <a>
                       <span class="profile-stats-item profile-stats-item-label"
-                        ><a href="/showFollow/<%= user.id %>"> Following</a></span
+                        >Following</span
                       >
                       <span
                         class="profile-stats-item profile-stats-item-number"
@@ -194,12 +194,11 @@
               </div>
             </div> -->
               </li>
-              <% tweets.forEach(item=>{ %>
+              <% following.forEach(item=>{ %>
               <li class="tweet-card">
                 <div class="resultados">
-                  <p><%= user.userName %></p>
-                  <p><%= item.text %></p>
-                  <p><%= item.createdAt.toDateString() %></p>
+                  <p><%= item.userName %></p>
+                  <hr>
                 </div>
               </li>
               <% }); %>
@@ -316,23 +315,7 @@
               <!-- Who to Follow panel -->
               <div class="panel-content">
                 <!--Follow list -->
-                <ol class="tweet-list">
-                  <% usersToFollow.forEach(usuarios =>{%>
-                  <li class="tweet-card">
-                    <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="<%= usuarios.image %>" alt="">
-                  <div class="tweet-header">
-                    <span class="fullname">
-                  <strong><%= usuarios.firstName.slice(0,1) %>. <%= usuarios.lastName %></strong>
-                </span>
-                    <span class="username">@<%= usuarios.userName %></span>
-                  </div>
-       <a href="/follow/<%= usuarios._id %>" class="btn btn-follow">Seguir</a>
-       <a href="/stop-follow/<%= usuarios._id %>" class="btn btn-unfollow">No Seguir</a>
-
-                </div>
-                  </li>
-                  <% }); %>                 </ol>
+               <!--  -->
                 <!--END: Follow list -->
               </div>
             </div>

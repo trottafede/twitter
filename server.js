@@ -26,9 +26,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 //Middlewares
-app.use(express.static(__dirname + "public"));
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true })); // Para recibir Json.
+app.use(express.urlencoded({ extended: false })); // Para recibir Json.
 
 // passport.js
 const passport = require("./middlewares/passport");

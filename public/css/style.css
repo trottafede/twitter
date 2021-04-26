@@ -85,7 +85,8 @@ a:hover {
 .profile-background {
   height: 320px;
   background-image: url("https://jooinn.com/images/nature-background-30.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Main avatar */
@@ -276,7 +277,7 @@ padding: 5px;
   color: #1da1f2;
   background-color: #fff;
   border: 1px solid #1da1f2;
-  display: block;
+  display: inline-block;
   font-size: 12px;
   line-height: 16px;
   padding: 4px 12px;
@@ -285,25 +286,33 @@ padding: 5px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  min-width: 89px;
+  min-width: 60px;
+}
+
+.btn-unfollow {
+  border-color: #ecb247;
+  color: #ecb247;
+  background-color: #fff;
+  border: 1px solid #ecb247;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 6px;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 70px;
 }
 
 .btn-follow:hover {
   background-color: #e8f5fd;
 }
 
-.form-like {
-  display: contents;
-}
-
-.button-like {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.octicon.octicon-heart:hover {
-  color: red;
+.btn-unfollow:hover {
+  background-color: #fdf4d7;
+  color: #ecb247;
 }
 /* END: Right column*/
 

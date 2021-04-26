@@ -74,9 +74,8 @@
                     cols="10"
                     rows="5"
                     minlength="10"
-                  >
- <%= user.bio %></textarea
-                  >
+                    placeholder="<%= user.bio %>"
+                  ></textarea>
                   <div class="valid-feedback">Todo ok!</div>
                   <div class="invalid-feedback">Ingresa breve descripción</div>
                   <div class="invalid-feedback">Minimo 10 dígitos</div>
@@ -116,8 +115,13 @@
                   <label for="image" class="form-label"
                     >Ingrese url de profile pic</label
                   >
-                  <input id="image" type="text" class="form-control"
-                  name="image" value="<%= user.image %>"" />
+                  <input
+                    id="image"
+                    type="text"
+                    class="form-control"
+                    name="image"
+                    placeholder="<%= user.image %>"
+                  />
                 </div>
 
                 <div class="mb-3 d-grid gap-2 col-4 mx-auto">
