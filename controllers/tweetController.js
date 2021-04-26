@@ -2,7 +2,7 @@ const Tweet = require("../models/Tweet");
 const User = require("../models/User");
 
 const newTweet = async (req, res) => {
-  // console.log("texto es: " + req.body.text + " de: " + req.user._id);
+  // console.log("texto es: " + req.body.text + " de: " + req.user);
   const { text } = req.body;
 
   const tweets = new Tweet({ text, author: req.user });

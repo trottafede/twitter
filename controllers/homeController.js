@@ -13,7 +13,6 @@ const showHome = async (req, res) => {
   // console.log(tweets);
   let arrayDeTweet = [];
 
-
   let count = 0;
 
   await new Promise((resolve) => {
@@ -34,7 +33,7 @@ const showHome = async (req, res) => {
         });
       } catch (e) {
         // error handling
-        console.log(e);
+        // console.log(e);
       } finally {
         // most important is here
         count += 1;
@@ -44,7 +43,6 @@ const showHome = async (req, res) => {
           res.render("home", { arrayDeTweet, user });
         }
       }
-
     });
   });
 
