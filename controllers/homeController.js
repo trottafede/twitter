@@ -60,8 +60,7 @@ const logout = async (req, res) => {
 const userHome = async (req, res) => {
   console.log("Logeado como: " + req.user);
   const user = req.user;
-  const usersToFollow = await User.find()
-  .sort({ createdAt: "asc" });
+  const usersToFollow = await User.find().sort({ createdAt: "asc" });
 
   const tweets = await Tweet.find({ author: req.user._id })
     .populate("user")

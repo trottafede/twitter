@@ -98,6 +98,21 @@
                       ></span>
                     </a>
                   </li>
+<<<<<<< HEAD
+=======
+                  <li>
+                    <a>
+                      <span class="profile-stats-item profile-stats-item-label"
+                        ><a href="/showFollow/<%= user.id %>">
+                          Following</a
+                        ></span
+                      >
+                      <span
+                        class="profile-stats-item profile-stats-item-number"
+                      ></span>
+                    </a>
+                  </li>
+>>>>>>> 14fbfb807ec00961c841feeb5833b46664e6fb65
                 </ul>
               </div>
               <div class="col"></div>
@@ -110,6 +125,7 @@
         <div class="row">
           <div class="col-lg-4 profile-col">
             <!-- Left column -->
+
             <div class="profile-header">
               <!-- Header information -->
               <h3 class="profile-fullname">
@@ -155,7 +171,7 @@
                   </form>
                 </div>
               </li> -->
-              <% tweets.forEach(item=>{ %>
+              <!-- <% tweets.forEach(item=>{ %>
               <li class="tweet-card">
                 <div class="resultados">
                   <p><%= user.userName %></p>
@@ -163,8 +179,71 @@
                   <p><%= item.createdAt.toDateString() %></p>
                 </div>
               </li>
+              <% }); %> -->
+
+              <% tweets.forEach(item=>{ %>
+              <li class="tweet-card mb-2">
+                <div class="tweet-content">
+                  <div class="tweet-header">
+                    <span class="fullname">
+                      <strong>
+                        <%= user.firstName %> <%= user.lastName %></strong
+                      >
+                    </span>
+                    <span class="username">@<%= user.userName %></span>
+                    <span class="tweet-time"
+                      ><%= item.createdAt.toDateString() %></span
+                    >
+                  </div>
+                  <a>
+                    <img
+                      class="tweet-card-avatar"
+                      src="<%= user.image %>"
+                      alt="profile pic"
+                    />
+                  </a>
+                  <div class="tweet-text">
+                    <p class="" lang="es" data-aria-label-part="0">
+                      <%= item.text %>
+                    </p>
+                  </div>
+                  <div class="tweet-footer">
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-comment" aria-hidden="true"></i
+                      ><span> 0</span>
+                    </a>
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-sync" aria-hidden="true"></i
+                      ><span> 0</span>
+                    </a>
+
+                    <form class="form-like" action="/like" method="POST">
+                      <input
+                        type="hidden"
+                        name="tweetId"
+                        value="
+                        <!-- <%= item.likes%> -->
+                        "
+                      />
+                      <button
+                        class="tweet-footer-btn button-like"
+                        type="submit"
+                      >
+                        <i class="octicon octicon-heart" aria-hidden="true"></i
+                        ><span>
+                          <!-- <%= item.likes %> -->
+                        </span>
+                      </button>
+                    </form>
+
+                    <a class="tweet-footer-btn">
+                      <i class="octicon octicon-mail" aria-hidden="true"></i
+                      ><span> 0</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
               <% }); %>
-             
             </ol>
             <!-- End: tweet list -->
           </div>
@@ -183,19 +262,35 @@
                   <% usersToFollow.forEach(usuarios =>{%>
                   <li class="tweet-card">
                     <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="<%= usuarios.image %>" alt="">
-                  <div class="tweet-header">
-                    <span class="fullname">
-                  <strong><%= usuarios.firstName.slice(0,1) %>. <%= usuarios.lastName %></strong>
-                </span>
-                    <span class="username">@<%= usuarios.userName %></span>
-                  </div>
-       <a href="/follow/<%= usuarios._id %>" class="btn btn-follow">Seguir</a>
-       <a href="/stop-follow/<%= usuarios._id %>" class="btn btn-unfollow">No Seguir</a>
-
-                </div>
+                      <img
+                        class="tweet-card-avatar"
+                        src="<%= usuarios.image %>"
+                        alt=""
+                      />
+                      <div class="tweet-header">
+                        <span class="fullname">
+                          <strong
+                            ><%= usuarios.firstName.slice(0,1) %>. <%=
+                            usuarios.lastName %></strong
+                          >
+                        </span>
+                        <span class="username">@<%= usuarios.userName %></span>
+                      </div>
+                      <a
+                        href="/follow/<%= usuarios._id %>"
+                        class="btn btn-follow"
+                        >Seguir</a
+                      >
+                      <a
+                        href="/stop-follow/<%= usuarios._id %>"
+                        class="btn btn-unfollow"
+                        >No Seguir</a
+                      >
+                    </div>
                   </li>
-                  <% }); %></ol><!--END: Follow list -->
+                  <% }); %>
+                </ol>
+                <!--END: Follow list -->
               </div>
             </div>
           </div>
