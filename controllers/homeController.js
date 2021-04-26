@@ -10,7 +10,9 @@ const showHome = async (req, res) => {
     .limit(20)
     .sort({ createdAt: "desc" });
 
+  // console.log(tweets);
   let arrayDeTweet = [];
+
 
   let count = 0;
 
@@ -21,12 +23,14 @@ const showHome = async (req, res) => {
         let newUser = await User.findById(item.author);
 
         arrayDeTweet.push({
+          _id: item._id,
           firstName: newUser.firstName,
           lastName: newUser.lastName,
           email: newUser.email,
           image: newUser.image,
           tweet: item.text,
           tweetDate: item.createdAt,
+          likes: item.likes.length,
         });
       } catch (e) {
         // error handling
@@ -40,6 +44,7 @@ const showHome = async (req, res) => {
           res.render("home", { arrayDeTweet, user });
         }
       }
+
     });
   });
 
