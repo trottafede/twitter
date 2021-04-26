@@ -292,6 +292,49 @@ padding: 5px;
   background-color: #e8f5fd;
 }
 
+.btn-follow {
+  border-color: #1da1f2;
+  color: #1da1f2;
+  background-color: #fff;
+  border: 1px solid #1da1f2;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 60px;
+}
+
+.btn-unfollow {
+  border-color: #ecb247;
+  color: #ecb247;
+  background-color: #fff;
+  border: 1px solid #ecb247;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 6px;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 70px;
+}
+
+.btn-follow:hover {
+  background-color: #e8f5fd;
+}
+
+.btn-unfollow:hover {
+  background-color: #fdf4d7;
+  color: #ecb247;
+}
+
 .form-like {
   display: contents;
 }
