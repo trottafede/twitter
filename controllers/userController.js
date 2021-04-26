@@ -23,7 +23,7 @@ const showSignUp = (req, res) => {
 };
 
 const validateSignUp = async (req, res) => {
-  const bcrypt = require("bcrypt");
+  const bcrypt = require("bcryptjs");
   var validator = require("email-validator");
   const faker = require("faker");
 
