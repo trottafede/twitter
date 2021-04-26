@@ -283,6 +283,20 @@ a:hover {
 .btn-follow:hover {
   background-color: #e8f5fd;
 }
+
+.form-like {
+  display: contents;
+}
+
+.button-like {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.octicon.octicon-heart:hover {
+  color: red;
+}
 /* END: Right column*/
 
 /* END: Main content elements' styles */

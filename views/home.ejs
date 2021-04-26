@@ -181,13 +181,16 @@
                       ><span> 64</span>
                     </a>
 
-                    <form action="/like" method="POST">
+                    <form class="form-like" action="/like" method="POST">
                       <input
                         type="hidden"
                         name="tweetId"
                         value="<%= item._id %>"
                       />
-                      <button class="tweet-footer-btn" type="submit">
+                      <button
+                        class="tweet-footer-btn button-like"
+                        type="submit"
+                      >
                         <i class="octicon octicon-heart" aria-hidden="true"></i
                         ><span><%= item.likes %> </span>
                       </button>
