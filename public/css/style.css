@@ -85,7 +85,8 @@ a:hover {
 .profile-background {
   height: 320px;
   background-image: url("https://jooinn.com/images/nature-background-30.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Main avatar */
@@ -168,9 +169,8 @@ a:hover {
 }
 
 .profile-header .btn {
-padding: 5px;
- }
-
+  padding: 5px;
+}
 
 .profile-element {
   color: #657786;
