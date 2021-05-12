@@ -6,11 +6,10 @@ const showHome = async (req, res) => {
   const user = req.user;
 
   const tweets = await Tweet.find()
+    .sort({ createdAt: -1 })
     .populate("user")
-    .limit(20)
-    .sort({ createdAt: "desc" });
-
-  // console.log(tweets);
+    .limit(20);
+  console.log(tweets);
   let arrayDeTweet = [];
 
   let count = 0;
@@ -40,6 +39,7 @@ const showHome = async (req, res) => {
         if (count == tweets.length) {
           // console.log(arrayDeTweet);
           resolve();
+
           res.json({ arrayDeTweet, user });
         }
       }
