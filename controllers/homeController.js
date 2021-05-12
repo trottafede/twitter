@@ -40,7 +40,7 @@ const showHome = async (req, res) => {
         if (count == tweets.length) {
           // console.log(arrayDeTweet);
           resolve();
-          res.render("home", { arrayDeTweet, user });
+          res.json({ arrayDeTweet, user });
         }
       }
     });
