@@ -12,23 +12,31 @@ const newTweet = async (req, res) => {
 };
 
 const createLike = async (req, res) => {
-  //conseguir el tweet que el usuario hace like
-  let tweet = await Tweet.findById(req.body.tweetId);
+  console.log(req.body);
 
-  //al campo like [] agregarle id del usuario que hace click
-  if (tweet.likes.includes(req.user._id)) {
-    console.log("este usuario está dentro de los likes");
-    const index = tweet.likes.indexOf(req.user._id);
-    if (index > -1) {
-      tweet.likes.splice(index, 1);
+  try {
+    //conseguir el tweet que el usuario hace like
+    let tweet = await Tweet.findById(req.body.tweetId);
+
+    //al campo like [] agregarle id del usuario que hace click
+    if (tweet.likes.includes(req.body.user)) {
+      console.log("este usuario está dentro de los likes");
+      const index = tweet.likes.indexOf(req.body.user);
+      if (index > -1) {
+        tweet.likes.splice(index, 1);
+      }
+    } else {
+      console.log("este usuario no está dentro de los likes de este tweet");
+      tweet.likes.push(req.body.user);
     }
-  } else {
-    console.log("este usuario no está dentro de los likes de este tweet");
-    tweet.likes.push(req.user);
-  }
 
-  await tweet.save();
-  res.redirect("/");
+    await tweet.save();
+  } catch {
+    return res.status(400).send({
+      message: "This is an error!",
+    });
+  }
+  res.json();
 };
 
 module.exports = {

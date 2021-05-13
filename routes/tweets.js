@@ -5,6 +5,7 @@ const logedIn = require("../middlewares/loginControl");
 
 // router.post("/create", logedIn, tweetController.newTweet);
 router.post("/create", tweetController.newTweet);
-router.post("/like", logedIn, tweetController.createLike);
+// router.post("/like", logedIn, tweetController.createLike);
+router.post("/like", tweetController.createLike);
 
 module.exports = router;

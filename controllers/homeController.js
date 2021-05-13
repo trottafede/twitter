@@ -9,7 +9,7 @@ const showHome = async (req, res) => {
     .sort({ createdAt: -1 })
     .populate("user")
     .limit(20);
-  console.log(tweets);
+
   let arrayDeTweet = [];
 
   let count = 0;
