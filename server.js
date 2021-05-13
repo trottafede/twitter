@@ -2,8 +2,12 @@ const path = require("path");
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+
 // const seeder = require("./seeder");
 // seeder();
 
@@ -28,7 +32,7 @@ app.set("view engine", "ejs");
 //Middlewares
 app.use(express.static(__dirname + "public"));
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true })); // Para recibir Json.
+app.use(express.urlencoded({ extended: true })); // Para recibir formdata
 
 // passport.js
 const passport = require("./middlewares/passport");

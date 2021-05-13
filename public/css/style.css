@@ -352,10 +352,9 @@ a:hover {
 .follow-link {
   text-decoration: none;
   color: #657786;
-font-size: 12px;
-font-weight: bold;
+  font-size: 12px;
+  font-weight: bold;
 }
-
 
 @media (max-width: 576px) {
   .avatar-container {
@@ -364,8 +363,8 @@ font-weight: bold;
     position: absolute;
     transition: bottom 0.3s;
     z-index: 3;
-  }         
-  
+  }
+
   .content-panel {
     margin: 10px 3px 0 20px;
     background-color: #fff;
@@ -381,8 +380,8 @@ font-weight: bold;
     position: absolute;
     transition: bottom 0.3s;
     z-index: 3;
-  }         
-  
+  }
+
   .content-panel {
     margin: 10px 3px 0 20px;
     background-color: #fff;
@@ -390,25 +389,24 @@ font-weight: bold;
     padding: 15px;
   }
 
-@media (min-width: 768px) {
-  .avatar-container {
-    bottom: -20px;
-    left: 10px;
-    position: absolute;
-    transition: bottom 0.3s;
-    z-index: 3;
-  }         
-  
-  .content-panel {
-    margin: 10px 3px 0 20px;
-    background-color: #fff;
-    line-height: 16px;
-    padding: 15px;
+  @media (min-width: 768px) {
+    .avatar-container {
+      bottom: -20px;
+      left: 10px;
+      position: absolute;
+      transition: bottom 0.3s;
+      z-index: 3;
+    }
+
+    .content-panel {
+      margin: 10px 3px 0 20px;
+      background-color: #fff;
+      line-height: 16px;
+      padding: 15px;
+    }
   }
 
+  /* END: Right column*/
+
+  /* END: Main content elements' styles */
 }
-
-
-/* END: Right column*/
-
-/* END: Main content elements' styles */

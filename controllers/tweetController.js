@@ -5,10 +5,10 @@ const newTweet = async (req, res) => {
   // console.log("texto es: " + req.body.text + " de: " + req.user);
   const { text } = req.body;
 
-  const tweets = new Tweet({ text, author: req.user });
-
-  await tweets.save();
-  res.redirect("/");
+  const tweet = new Tweet({ text, author: req.body.user });
+  console.log(req.body);
+  await tweet.save(); //try y catch
+  res.json(tweet);
 };
 
 const createLike = async (req, res) => {
