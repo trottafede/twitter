@@ -12,8 +12,6 @@ const newTweet = async (req, res) => {
 };
 
 const createLike = async (req, res) => {
-  console.log(req.body);
-
   try {
     //conseguir el tweet que el usuario hace like
     let tweet = await Tweet.findById(req.body.tweetId);
@@ -36,7 +34,8 @@ const createLike = async (req, res) => {
       message: "This is an error!",
     });
   }
-  res.json();
+
+  return res.json("like successful");
 };
 
 module.exports = {
