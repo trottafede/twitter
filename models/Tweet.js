@@ -9,6 +9,8 @@ const tweetSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
+    // AVERIGUAR COMO NO REPETIR LIKES.
+    // SI VUELVE A DAR LIKE SACAR EL LIKE.
     likes: [
       {
         type: Schema.Types.ObjectId,
